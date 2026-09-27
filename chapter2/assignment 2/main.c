@@ -30,15 +30,12 @@ void reverse(int arr[], int n) {
 void oddFirst(int arr[], int n) {
     //strategy is to put even last
     //when find first even look through rest of array and switch with odd if find it.
-    bool swap = true;
-    for (int i = 0; i < n && swap; i++) {
-        swap = false;
+    for (int i = 0; i < n; i++) {
         if (*(arr + i) % 2 == 0) { //checks if even
             //dont swap first element ALERT
             for (int j = i + 1; j < n; j++) {
                 if (*(arr + j) % 2 == 1) { //checks if odd
                     //do swap
-                    swap = true;
                     //temp = even number
                     int temp = *(arr + i);
                     //lower element = odd
